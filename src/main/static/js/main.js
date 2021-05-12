@@ -1,4 +1,7 @@
-const toDoList = document.querySelector("#stuffList");
+//const toDoList = document.querySelector("#stuffList");
+const input = document.getElementById("input");
+const boton = document.getElementById("boton");
+const table = document.getElementById("table");
 
 function showList(lists) {
     lists.forEach(list =>{
