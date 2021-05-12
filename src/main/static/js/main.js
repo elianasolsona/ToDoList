@@ -3,12 +3,13 @@ const input = document.getElementById("input");
 const boton = document.getElementById("boton");
 const table = document.getElementById("table");
 
-function showList(lists) {
-    lists.forEach(list =>{
-        const element = `<div class="list">
-        <ul>
-            <li></li>
-        </ul></div>`
-    })
-
+function addTask (){
+    const row = document.createElement("tr");
+        row.innerHTML =`
+            <td> <input type="checkbox"/></td>
+            <td> ${input.value}</td>
+            <td> <span onClick="borrar()"> X </span> </td>
+        `;
+        table.appendChild(row);
 }
+boton.addEventListener("click", addTask);
