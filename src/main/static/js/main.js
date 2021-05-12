@@ -8,8 +8,12 @@ function addTask (){
         row.innerHTML =`
             <td> <input type="checkbox"/></td>
             <td> ${input.value}</td>
-            <td> <span onClick="borrar()"> X </span> </td>
+            <td> <span onClick="borrar()"></span> </td>
         `;
         table.appendChild(row);
 }
 boton.addEventListener("click", addTask);
+
+function borrar(event){
+    this.event.target.parentElement.parentElement.remove();
+}
