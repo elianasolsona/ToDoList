@@ -10,6 +10,7 @@ function addTask (){
             <td> ${input.value}</td>
                     `;
         table.appendChild(row);
+        input.value="";
 }
 boton.addEventListener("click", addTask);
 
