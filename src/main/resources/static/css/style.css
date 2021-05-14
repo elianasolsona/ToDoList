@@ -20,29 +20,40 @@ nav{
 }
 
 #contenedor{
-    background-color:lightgray;
+    background-color: #F5F5F5;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     position: relative;
     width: 100%;
     height: 10em;
+    border: none;
 }
 
 #input{
-    height: 40px;
+    height: 80px;
     width: 100%;
     padding:12px  20px;
     margin: 30px;
     margin-left: 20px;
     font-size: 40px;
+    border: none;
 }
+
 #boton{
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     font-size: 50px;
     color: white;
     background: #ee8222;
     margin: 30px;
+    padding:0 12px 12px 12px;
+    border: none;
+}
+
+.circle {
+    height: 35px;
+    width: 35px;
+    margin-right: 15px;
 }
