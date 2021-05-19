@@ -3,10 +3,10 @@ const input = document.getElementById("input");
 const boton = document.getElementById("boton");
 const table = document.getElementById("table");
 
-function addTask (){
+function addTask (task){
     const row = document.createElement("tr");
         row.innerHTML =`
-            <td> <input onClick= "borrar()" type="radio"/></td>
+            <td> <input class="circle" onClick= "borrar()" type="radio"/></td>
             <td> ${input.value}</td>
                     `;
         table.appendChild(row);
@@ -20,3 +20,5 @@ function borrar(){
 }
 
 boton.addEventListener("click", borrar);
+
+
