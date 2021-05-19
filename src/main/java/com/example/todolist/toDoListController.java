@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class toDoListController<task> {
+public class toDoListController {
 
     private List<toDoList> tasks;
 
