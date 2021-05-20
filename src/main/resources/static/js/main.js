@@ -1,19 +1,25 @@
-const section = document.querySelector("#section");
-const boton = document.getElementById("boton");
+const tableSection = document.querySelector("#table-section");
+
 
 // 3)
 function showTasks(tasks){
-    section.innerHTML ="";
-    tasks.forEach(task => {
-        const element = `<div class="task">
-            <p class="input"> ${task.input}</p></div>`;
-        table.insertAdjacentHTML("beforeend", element)
+  tableSection.innerHTML ="";
+    tasks.forEach((task, position) => {
+        const htmlElement = document.createElement("div");
+        htmlElement.innerHTML = `<div class="task">
+        <div
+            class="close-button"
+            onclick="fetch(\`/tasks/${position}\`,
+            { method: 'DELETE'}).then(reloadTasks)">x</div>
+        <p class="description">${task.description}</p>
+        </div>`;
+      tableSection.appendChild(htmlElement)
     })
 }
 
 //2)
 
-let loadTasks = () => {
+let reloadTasks = () => {
     fetch("/tasks")
         .then(r => r.json())
         .then(showTasks)
@@ -21,31 +27,6 @@ let loadTasks = () => {
 
 //1)
 
-boton.addEventListener("click", loadTasks)
-
-
-//const input = document.getElementById("input");
-
-//const table = document.getElementById("table");
-
-/*function addTask (task){
-    const row = document.createElement("tr");
-        row.innerHTML =`
-            <td> <input class="circle" onClick= "borrar()" type="radio"/></td>
-            <td> ${input.value}</td>
-                    `;
-        table.appendChild(row);
-        input.value="";
-}
-boton.addEventListener("click", addTask);
-
-
-function borrar(){
-    this.event.target.parentElement.parentElement.remove();
-}
-
-boton.addEventListener("click", borrar);
-*/
-
+document.addEventListener("DOMContentLoaded", reloadTasks)
 
 
