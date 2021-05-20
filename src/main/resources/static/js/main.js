@@ -1,8 +1,9 @@
-const table = document.querySelector("#table");
+const section = document.querySelector("#section");
 const boton = document.getElementById("boton");
 
 // 3)
 function showTasks(tasks){
+    section.innerHTML ="";
     tasks.forEach(task => {
         const element = `<div class="task">
             <p class="input"> ${task.input}</p></div>`;

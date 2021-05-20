@@ -1,30 +1,31 @@
 package com.example.todolist;
 
-import org.springframework.scheduling.config.Task;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class toDoListController {
+public class ToDoListController {
 
-    private List<toDoList> tasks;
+    private List<Task> tasks;
 
-    public toDoListController(){
+    public ToDoListController(){
         tasks= new ArrayList<>();
     }
 
     @GetMapping("/tasks")
-    public List<toDoList> allTasks(){
+    public List<Task> allTasks(){
         return tasks;
     }
 
     @PostMapping("/tasks")
-    public void addTasks(toDoList task){
+    public RedirectView addNewTask(Task task) {
         tasks.add(task);
+        return new RedirectView("/");
       }
 
 }
