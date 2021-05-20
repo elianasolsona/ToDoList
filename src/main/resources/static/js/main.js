@@ -1,6 +1,5 @@
 const tableSection = document.querySelector("#table-section");
 
-
 // 3)
 function showTasks(tasks){
   tableSection.innerHTML ="";
@@ -9,8 +8,7 @@ function showTasks(tasks){
         htmlElement.innerHTML = `<div class="task">
         <div
             class="close-button"
-            onclick="fetch(\`/tasks/${position}\`,
-            { method: 'DELETE'}).then(reloadTasks)">x</div>
+            onclick="fetch(\`/tasks/${position}\`,{ method: 'DELETE'}).then(reloadTasks)">x</div>
         <p class="description">${task.description}</p>
         </div>`;
       tableSection.appendChild(htmlElement)
