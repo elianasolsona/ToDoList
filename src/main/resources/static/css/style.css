@@ -33,6 +33,7 @@ nav{
 
 }
 
+
 #input{
     height: 80px;
     width: 100%;
@@ -69,4 +70,11 @@ nav{
     text-transform: uppercase;
     float:left;
     border: 1px solid black;
+}
+
+#refresh{
+    height:60px;
+    width:60px;
+    margin-left: 30px;
+    margin-top: 20px;
 }
