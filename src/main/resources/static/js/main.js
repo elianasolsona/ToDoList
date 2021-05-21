@@ -1,7 +1,8 @@
 const tableSection = document.querySelector("#table-section");
-const boton=  document.querySelector("#boton");
+let boton=  document.querySelector("#boton");
 // 3)
 function showTasks(tasks){
+
   tableSection.innerHTML ="";
     tasks.forEach((task, position) => {
         const htmlElement = document.createElement("div");
@@ -11,8 +12,13 @@ function showTasks(tasks){
             onclick="fetch(\`/tasks/${position}\`,{ method: 'DELETE'}).then(reloadTasks)"><a class="close"></a></div>
         <p class="description">${task.description}</p>
         </div>`;
-      tableSection.appendChild(htmlElement)
-    })
+        if (task.description.length > 3 ){
+            tableSection.appendChild(htmlElement)
+        }
+        else{
+            boton.disabled=false;
+        }
+     })
 }
 
 //2)
