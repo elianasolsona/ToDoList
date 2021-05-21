@@ -1,5 +1,5 @@
 const tableSection = document.querySelector("#table-section");
-
+const boton=  document.querySelector("#boton");
 // 3)
 function showTasks(tasks){
   tableSection.innerHTML ="";
