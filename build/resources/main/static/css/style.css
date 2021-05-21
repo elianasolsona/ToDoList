@@ -44,8 +44,8 @@ nav{
 }
 
 #boton{
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
     font-size: 50px;
     color: white;
@@ -53,19 +53,20 @@ nav{
     margin: 30px;
     padding:0 12px 12px 12px;
     border: none;
+    line-height: 52px;
 }
 
 .close{
-    width:30px;
-    height:30px;
-    background-color:#03800b;
+    width:20px;
+    height:20px;
     margin: 5px;
     padding:10px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
-    border-radius: 50px;
+    border-radius: 50%;
     font-size:11px;
     line-height:32px;
     text-transform: uppercase;
     float:left;
+    border: 1px solid black;
 }
