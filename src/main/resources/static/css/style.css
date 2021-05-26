@@ -100,4 +100,7 @@ nav{
     text-decoration: none;
     color: #F5F5F5;
 }
-
+p {
+    color: #F5F5F5;
+    font-size: 50px;
+}
