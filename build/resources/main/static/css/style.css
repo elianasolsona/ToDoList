@@ -20,6 +20,7 @@ nav{
     min-height: 82vh;
     font-size: 50px;
     margin-left: 20px;
+    color: #000000;
 }
 
 #contenedor{
@@ -100,7 +101,11 @@ nav{
     text-decoration: none;
     color: #F5F5F5;
 }
+<<<<<<< HEAD
 p {
+=======
+.p {
+>>>>>>> b06e143f71c1e1f083ffbc845508252d6bd70fd2
     color: #F5F5F5;
     font-size: 50px;
 }
