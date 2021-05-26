@@ -9,6 +9,9 @@ nav{
     boxshadow: 0px 10px -6px #999999;
     z-index: 100;
     margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #table-section{
@@ -30,16 +33,13 @@ nav{
     height: 10em;
     border: none;
     left: 0;
-
 }
-
 
 #input{
     height: 80px;
     width: 100%;
     padding:12px  20px;
-    margin: 30px;
-    margin-left: 20px;
+    margin: 30px 30px 30px 20px;
     font-size: 40px;
     border: none;
 }
@@ -55,7 +55,6 @@ nav{
     padding:0 12px 12px 12px;
     border: none;
     line-height: 52px;
-
 }
 
 .close{
@@ -79,4 +78,29 @@ nav{
     margin-left: 30px;
     margin-top: 10px;
     background-color: transparent;
+}
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 10px 50px 10px 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #F5F5F5;
+}
+
+.taskdone {
+    display: flex;
+    font-size: 30px;
+    text-decoration: none;
+    color: #F5F5F5;
+}
+p {
+    color: #F5F5F5;
+    font-size: 50px;
 }
