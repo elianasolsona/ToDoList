@@ -31,5 +31,9 @@ public class ToDoListController {
   void deleteTask(@PathVariable int index) {tasks.remove(index);}
 
   @PutMapping("/tasks/{id}/taskDone/{markAsTaskDone}")
-  @ResponseStatus(HttpStatus.NO_CONTENT)
+  public void setTaskDone(@PathVariable Integer id, @PathVariable boolean markAsTaskDone){
+    Task task = tasks.get(id);
+    task.setTaskDone(markAsTaskDone);
+    tasks.put(id,task);
+  }
 }
