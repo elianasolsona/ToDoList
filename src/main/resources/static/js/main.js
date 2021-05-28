@@ -8,7 +8,7 @@ function showTasks(tasks){
         htmlElement.innerHTML = `<div class="task">
          <div
             class="close-button"
-            onclick="fetch(\`/tasks/${id}\`,{ method: 'DELETE'}).then(reloadTasks)"><a class="close"></a></div>
+            onclick="fetch(\`/tasks/${id}\`,{ method: 'DELETE'}).then(markAsTaskDone)"><a class="close"></a></div>
         <p class="description">${task.description}</p>
         </div>`;
         if (task.description.length > 3 ){
@@ -21,17 +21,17 @@ function showTasks(tasks){
 }
 
 //2)
+function markAsTaskDone(id, enable ) {
+    fetch(`/tasks/${id}/taskDone/${enable}`, { method: 'PUT'})
+        .then(reloadTasks)
+
 let reloadTasks = () => {
     fetch("/tasks")
         .then(r => r.json())
         .then(showTasks)
 };
 
-/*function markAsTaskDone(id, enable ) {
-    fetch(`/tasks/${id}/taskDone/${enable}`, { method: 'PUT'})
-        .then(reloadTasks)*/
-
 //1)
 
-document.addEventListener("DOMContentLoaded", reloadTasks)
+document.addEventListener("DOMContentLoaded", reloadTasks)}
 

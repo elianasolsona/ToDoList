@@ -6,7 +6,7 @@ function showTasks(tasks){
         for (let [id, task] of Object.entries(tasks)){
         const htmlElement = document.createElement("div");
         htmlElement.innerHTML = `<div class="task">
-         <div
+        <div
             class="close-button"
             onclick="fetch(\`/tasks/${id}\`,{ method: 'DELETE'}).then(reloadTasks)"><a class="close"></a></div>
         <p class="description">${task.description}</p>
@@ -21,17 +21,16 @@ function showTasks(tasks){
 }
 
 //2)
+
 let reloadTasks = () => {
     fetch("/tasks")
         .then(r => r.json())
         .then(showTasks)
 };
 
-/*function markAsTaskDone(id, enable ) {
-    fetch(`/tasks/${id}/taskDone/${enable}`, { method: 'PUT'})
-        .then(reloadTasks)*/
-
 //1)
 
 document.addEventListener("DOMContentLoaded", reloadTasks)
+
+
 
