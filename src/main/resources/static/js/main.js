@@ -6,9 +6,9 @@ function showTasks(tasks){
         for (let [id, task] of Object.entries(tasks)){
         const htmlElement = document.createElement("div");
         htmlElement.innerHTML = `<div class="task">
-         <div
+        <div
             class="close-button"
-            onclick="fetch(\`/tasks/${id}\`,{ method: 'DELETE'}).then(markAsTaskDone)"><a class="close"></a></div>
+            onclick="fetch(\`/tasks/${id}\`,{ method: 'DELETE'}).then(reloadTasks)"><a class="close"></a></div>
         <p class="description">${task.description}</p>
         </div>`;
         if (task.description.length > 3 ){
@@ -33,5 +33,5 @@ let reloadTasks = () => {
 
 //1)
 
-document.addEventListener("DOMContentLoaded", reloadTasks)}
+document.addEventListener("DOMContentLoaded", reloadTasks)
 
