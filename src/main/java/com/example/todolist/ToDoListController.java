@@ -30,6 +30,4 @@ public class ToDoListController {
   @DeleteMapping("/tasks/{index}")
   void deleteTask(@PathVariable int index) {tasks.remove(index);}
 
-  @PutMapping("/tasks/{id}/taskDone/{markAsTaskDone}")
-  @ResponseStatus(HttpStatus.NO_CONTENT)
 }

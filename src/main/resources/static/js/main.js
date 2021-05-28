@@ -21,9 +21,6 @@ function showTasks(tasks){
 }
 
 //2)
-function markAsTaskDone(id, enable ) {
-    fetch(`/tasks/${id}/taskDone/${enable}`, { method: 'PUT'})
-        .then(reloadTasks)
 
 let reloadTasks = () => {
     fetch("/tasks")
@@ -34,4 +31,6 @@ let reloadTasks = () => {
 //1)
 
 document.addEventListener("DOMContentLoaded", reloadTasks)
+
+
 
